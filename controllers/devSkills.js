@@ -12,7 +12,8 @@ function index(req, res) {
 }
 
 function show(req, res) {
+    const id = req.params.id;
     res.render('devSkills/show', {
-        skill: skill.getOne(req.params.id),
+        skill: devSkill.getOne(id)
     });
 }
